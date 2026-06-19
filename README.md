@@ -1,93 +1,84 @@
-# 🤖 ai-human-sdd — SDD 人机协作工作法
+# 🤖 ai-human-sdd — SDD Human-AI Collaboration Methodology
 
-> 人机协作 SDD 模式 — AI 执行结构 + 用户视角自审，一次性交付完整产品业务闭环。
->
 > AI executes structure + user reviews, delivering a complete product business loop in one shot.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 简介 | Introduction
+## Introduction
 
-**ai-human-sdd** 是一种**人机协作的 SDD（Spec-Driven Development）工作法**，用于完整产品的全流程交付。可配合各种 AI 编程助手（Reasonix、Cursor、GitHub Copilot、Claude Code 等）使用。
+**ai-human-sdd** is a **human-AI collaborative SDD (Spec-Driven Development) methodology** for end-to-end product delivery. It works with various AI coding assistants (Reasonix, Cursor, GitHub Copilot, Claude Code, etc.).
 
-核心理念：**AI 负责结构和执行，人负责决策和把关。**
+Core philosophy: **AI handles structure and execution; humans make decisions and review.**
 
-工作流程分为两大阶段：
+The workflow has two phases:
 
 ```
-阶段一：设计（Design）
-  Constitution → Spec → Plan（含 UI 规范选择）→ 你确认方案
+Phase 1: Design
+  Constitution → Spec → Plan (incl. UI style selection) → You approve
 
-阶段二：实现（Implement）
-  按业务层逐层自动化实现 → 测试 → 自审优化 → 交付
+Phase 2: Implement
+  Layer-by-layer automated delivery → Testing → Self-review → Ship
 ```
 
-> 你只需要决策四次：定方向 → 审方案 → 确认自审结果 → 验收交付。
-> 中间的编码执行由 AI 全权完成，无需在阶段间做确认。
+> You only make **four decisions**: set direction → review the plan → confirm self-review → accept delivery.
+> AI handles all coding, testing, and optimization in between without interrupting you.
 
 ---
 
-## 如何使用 | How to Use
+## How to Use
 
-### 方式一：作为 Prompt 模板直接使用
+### Option 1: Use as a Prompt Template
 
-将 [SKILL.md](SKILL.md) 的内容作为 System Prompt 或上下文提供给 AI 助手即可。
+Paste the contents of [SKILL.md](SKILL.md) as a system prompt or context to your AI assistant.
 
-### 方式二：作为参考文档
+### Option 2: Use as a Reference
 
-阅读 SKILL.md，理解 SDD 工作法的流程和原则，手动指导 AI 按步骤执行。
+Read SKILL.md to understand the SDD workflow and principles, then guide your AI assistant through the steps manually.
 
-### 方式三：配合 AI 工具
+### Option 3: Integrate with AI Tools
 
-- **Reasonix**: `reasonix skill install` 安装后通过触发词加载
-- **Claude Code / Cursor**: 将 SKILL.md 加入项目上下文（Project Rules / .cursorrules）
-- **ChatGPT / Claude**: 直接将文档内容粘贴到对话中
-
----
-
-## 使用方法 | Usage
-
-### 典型工作流 | Typical Workflow
-
-1. **定方向** — AI 给出项目方向选项，你来选
-2. **Constitution** — 起草项目核心原则，你审阅
-3. **Spec** — 按业务层编写完整功能规格，含验收条件
-4. **Plan** — 输出完整技术方案（结构/数据/API/UI规范）
-5. **实现管道** — AI 逐层自动化实现，每层经过测试→质量门→UI校验
-6. **用户视角自审** — AI 模拟用户走通所有流程，修复问题
-7. **交付** — 生成完整交付包（代码+文档+测试报告）
+- **Reasonix**: Install via `reasonix skill install` and trigger by keywords
+- **Claude Code / Cursor**: Add SKILL.md to project context (Project Rules / .cursorrules)
+- **ChatGPT / Claude**: Paste the document directly into the conversation
 
 ---
 
-## 设计哲学 | Design Philosophy
+## Typical Workflow
 
-| 原则 | 说明 |
-|------|------|
-| 不跳过决策闸门 | 设计阶段每步确认后再推进，避免返工 |
-| 一次性设计，Solo 连续性执行 | 设计充分讨论，实现 AI 全权负责 |
-| 完整性先行 | 业务逻辑必须闭环，不允许"此功能暂未实现"的断点 |
-| 质量门自动拦截 | 测试/构建/代码质量/UI规范在管道内自动检查 |
-| 可追溯 | Spec 和 Plan 确认后保存，实现变更记录到 changelog |
-
----
-
-
+1. **Set Direction** — AI presents project options; you choose
+2. **Constitution** — Draft core principles; you review
+3. **Spec** — Write full feature specs by business layer with acceptance criteria
+4. **Plan** — Output complete technical plan (structure / data / API / UI spec)
+5. **Implementation Pipeline** — AI implements layer by layer with testing → quality gates → UI checks
+6. **User Perspective Self-Review** — AI simulates the user journey, fixes issues
+7. **Delivery** — Generate complete delivery package (code + docs + test report)
 
 ---
 
-## 许可证 | License
+## Design Philosophy
+
+| Principle | Description |
+|-----------|-------------|
+| No skipped decision gates | Every step in the design phase requires confirmation before proceeding |
+| One-shot design, solo continuous execution | Full discussion upfront, AI handles all coding autonomously |
+| Completeness first | Business logic must form a closed loop — no "coming soon" placeholders |
+| Automatic quality gates | Tests, builds, code quality, UI consistency checked automatically |
+| Traceability | Spec and Plan are saved; implementation changes are logged |
+
+---
+
+## License
 
 [MIT](LICENSE) © 2025 xiaojie
 
 ---
 
-## 贡献 | Contributing
+## Contributing
 
-欢迎提交 Issue 和 PR！请确保：
+Issues and PRs welcome! Please ensure:
 
-1. 保持与现有工作流的一致性
-2. 更新相关文档
-3. 说明改动对设计/实现阶段的影响
-
+1. Consistency with the existing workflow
+2. Update related documentation
+3. Explain the impact on design/implementation phases
