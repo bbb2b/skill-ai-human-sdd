@@ -4,6 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> **🌐 中文版 👉 [README.zh.md](README.zh.md)**
+
 ---
 
 ## Introduction
