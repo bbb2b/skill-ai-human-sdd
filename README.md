@@ -1,4 +1,4 @@
-# 🤖 ai-human-sdd — Reasonix Skill
+# 🤖 ai-human-sdd — SDD 人机协作工作法
 
 > 人机协作 SDD 模式 — AI 执行结构 + 用户视角自审，一次性交付完整产品业务闭环。
 >
@@ -10,7 +10,7 @@
 
 ## 简介 | Introduction
 
-**ai-human-sdd** 是 [Reasonix](https://github.com/reasonix/reasonix) 的一款技能（skill），定义了一种**人机协作的 SDD（Spec-Driven Development）工作法**，用于完整产品的全流程交付。
+**ai-human-sdd** 是一种**人机协作的 SDD（Spec-Driven Development）工作法**，用于完整产品的全流程交付。可配合各种 AI 编程助手（Reasonix、Cursor、GitHub Copilot、Claude Code 等）使用。
 
 核心理念：**AI 负责结构和执行，人负责决策和把关。**
 
@@ -29,39 +29,25 @@
 
 ---
 
-## 安装 | Installation
+## 如何使用 | How to Use
 
-### 前提 | Prerequisites
+### 方式一：作为 Prompt 模板直接使用
 
-- [Reasonix](https://reasonix.dev) 已安装并可用
+将 [SKILL.md](SKILL.md) 的内容作为 System Prompt 或上下文提供给 AI 助手即可。
 
-### 安装技能 | Install the Skill
+### 方式二：作为参考文档
 
-```bash
-# 方式一：从 GitHub 直接安装
-reasonix skill install https://raw.githubusercontent.com/<你的GitHub用户名>/skill-ai-human-sdd/main/SKILL.md
+阅读 SKILL.md，理解 SDD 工作法的流程和原则，手动指导 AI 按步骤执行。
 
-# 方式二：克隆仓库后本地安装
-git clone https://github.com/<你的GitHub用户名>/skill-ai-human-sdd.git
-reasonix skill install ./skill-ai-human-sdd/SKILL.md
-```
+### 方式三：配合 AI 工具
 
-### 验证 | Verify
-
-```bash
-reasonix skill list | grep ai-human-sdd
-```
+- **Reasonix**: `reasonix skill install` 安装后通过触发词加载
+- **Claude Code / Cursor**: 将 SKILL.md 加入项目上下文（Project Rules / .cursorrules）
+- **ChatGPT / Claude**: 直接将文档内容粘贴到对话中
 
 ---
 
 ## 使用方法 | Usage
-
-在 Reasonix 对话中触发该技能：
-
-| 触发词 | Trigger Phrases |
-|--------|----------------|
-| "SDD"、"完整产品"、"业务闭环"、"项目启动" | English: "SDD", "full product", "business loop", "new project" |
-| "人机协作"、"全量实现"、"solo"、"自审优化" | "one-shot delivery", "human-AI collaboration", "solo mode" |
 
 ### 典型工作流 | Typical Workflow
 
@@ -87,20 +73,7 @@ reasonix skill list | grep ai-human-sdd
 
 ---
 
-## 依赖的关联技能 | Dependent Skills
 
-该项目在生产环境中通常与以下 Reasonix 技能配合使用：
-
-| 技能 | 用途 |
-|------|------|
-| `code-quality` | 编码质量全流程指南 |
-| `phase-delegator` | 业务层拆解与 Sub-Agent 并行执行 |
-| `design-taste-frontend` | 反 AI 模板化前端设计 |
-| `minimalist-ui` | 极简编辑风 UI 规范 |
-| `high-end-visual-design` | 高级视觉设计规范 |
-| `frontend-design-gddw` | 前端设计 token 系统 |
-
-> **注意**：这些为可选依赖。`ai-human-sdd` 核心工作流不依赖它们，但在前端项目中选择 UI 规范时会用到。
 
 ---
 
@@ -117,3 +90,4 @@ reasonix skill list | grep ai-human-sdd
 1. 保持与现有工作流的一致性
 2. 更新相关文档
 3. 说明改动对设计/实现阶段的影响
+
